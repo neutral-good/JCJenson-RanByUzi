@@ -67,6 +67,37 @@
   background: #1e1428;
   box-shadow: 0 0 15px #6a00ff;
 }
+      <script>
+function hackerJump(e, page) {
+  e.preventDefault();
+  
+  document.body.style.transition = 'all 0.1s';
+  document.body.style.filter = 'brightness(3) hue-rotate(90deg)';
+  
+  const glitch = document.createElement('div');
+  glitch.innerHTML = '▶ ACCESSING DOSSIERS...<br>▣ ▣ ▣ ABSOLUTE_SOLVER OVERRIDE ▣ ▣ ▣';
+  glitch.style.position = 'fixed';
+  glitch.style.top = '50%';
+  glitch.style.left = '50%';
+  glitch.style.transform = 'translate(-50%, -50%)';
+  glitch.style.fontSize = '2rem';
+  glitch.style.color = '#ffcc00';
+  glitch.style.textShadow = '0 0 20px #ff00ff';
+  glitch.style.zIndex = '9999';
+  glitch.style.textAlign = 'center';
+  glitch.style.fontFamily = "'Michroma', monospace";
+  document.body.appendChild(glitch);
+
+  const beep = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
+  beep.play();
+
+  setTimeout(() => {
+    document.body.style.filter = '';
+    glitch.remove();
+    window.location.href = page; // actually go there
+  }, 800);
+}
+</script>
     body {
   background: #2f2c43;
   color: #c77bff; 
@@ -151,7 +182,7 @@ a:hover {
 
     <h2>Navigation</h2>
 
-    <a href="characters.html" class="button">Character Files</a>
+    <a href="characters.html" class="button" onclick="hackerJump(event, 'characters.html')">Character Files <span style="color:#ffcc00;">[ACCESS GRANTED]</span></a>
     <br>
     <a href="episodes.html" class="button">Episode Guide</a>
     <br>
