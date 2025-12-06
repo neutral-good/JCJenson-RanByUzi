@@ -72,10 +72,43 @@
   margin: 0;
   padding: 20px;
 }
-  a {
-  color: #8c79b2;}
-  a:hover {class="glitch";
-    color: #e2e2e7;
+a {
+  color: #8c79b2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  animation: glitch-hover 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-hover {
+  0% { 
+    text-shadow: 2px 0 cyan, -2px 0 magenta;
+    transform: translate(0);
+  }
+  20% { 
+    text-shadow: -2px 0 cyan, 2px 0 magenta;
+    transform: translate(-2px, -2px);
+  }
+  40% { 
+    text-shadow: 2px 0 cyan, -2px 0 magenta;
+    transform: translate(2px, -2px);
+  }
+  60% { 
+    text-shadow: -2px 0 cyan, 2px 0 magenta;
+    transform: translate(-2px, 2px);
+  }
+  80% { 
+    text-shadow: 2px 0 cyan, -2px 0 magenta;
+    transform: translate(2px, 2px);
+  }
+  100% { 
+    text-shadow: -2px 0 cyan, 2px 0 magenta;
+    transform: translate(0);
+  }
 }
     </style>
   </head>
