@@ -1,201 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      h1 {
-  font-size: 48px;
-}
-.glitch {
-        position: relative;
-        color: #fff;
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-decoration: none;
-        display: inline-block;
-      }
-      .glitch::before,
-      .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        overflow: hidden;
-        clip: rect(0, 900px, 0, 0);
-      }
-      .glitch::before {
-        left: 2px;
-        text-shadow: -2px 0 magenta;
-        animation: glitch-anim 2s infinite linear alternate-reverse;
-      }
-      .glitch::after {
-        left: -2px;
-        text-shadow: -2px 0 cyan;
-        animation: glitch-anim2 3s infinite linear alternate-reverse;
-      }
-
-      /* Hover makes the glitch go nuts */
-      .glitch:hover::before {
-        animation: glitch-anim 0.4s infinite linear alternate-reverse;
-      }
-      .glitch:hover::after {
-        animation: glitch-anim2 0.5s infinite linear alternate-reverse;
-      }
-
-      @keyframes glitch-anim {
-        0%   { clip: rect(10px, 9999px, 20px, 0); }
-        20%  { clip: rect(30px, 9999px, 80px, 0); }
-        40%  { clip: rect(60px, 9999px, 40px, 0); }
-        60%  { clip: rect(10px, 9999px, 90px, 0); }
-        80%  { clip: rect(50px, 9999px, 60px, 0); }
-        100% { clip: rect(20px, 9999px, 30px, 0); }
-      }
-      @keyframes glitch-anim2 {
-        0%   { clip: rect(5px, 9999px, 40px, 0); }
-        20%  { clip: rect(50px, 9999px, 10px, 0); }
-        40%  { clip: rect(10px, 9999px, 90px, 0); }
-        60%  { clip: rect(80px, 9999px, 30px, 0); }
-        80%  { clip: rect(40px, 9999px, 60px, 0); }
-        100% { clip: rect(70px, 9999px, 20px, 0); }
-      }
-      .terminal {
-  border: 2px solid #6a00ff;
-  padding: 20px;
-  border-radius: 10px;
-  background: #1e1428;
-  box-shadow: 0 0 15px #6a00ff;
-}
-      <script>
-function hackerJump(e, page) {
-  e.preventDefault();
-  
-  document.body.style.transition = 'all 0.1s';
-  document.body.style.filter = 'brightness(3) hue-rotate(90deg)';
-  
-  const glitch = document.createElement('div');
-  glitch.innerHTML = '▶ ACCESSING DOSSIERS...<br>▣ ▣ ▣ ABSOLUTE_SOLVER OVERRIDE ▣ ▣ ▣';
-  glitch.style.position = 'fixed';
-  glitch.style.top = '50%';
-  glitch.style.left = '50%';
-  glitch.style.transform = 'translate(-50%, -50%)';
-  glitch.style.fontSize = '2rem';
-  glitch.style.color = '#ffcc00';
-  glitch.style.textShadow = '0 0 20px #ff00ff';
-  glitch.style.zIndex = '9999';
-  glitch.style.textAlign = 'center';
-  glitch.style.fontFamily = "'Michroma', monospace";
-  document.body.appendChild(glitch);
-
-  const beep = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
-  beep.play();
-
-  setTimeout(() => {
-    document.body.style.filter = '';
-    glitch.remove();
-    window.location.href = page; // actually go there
-  }, 800);
-}
-</script>
-    body {
-  background: #2f2c43;
-  color: #c77bff; 
-  font-family: 'Michroma', Eurostile, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-a {
-  color: #8c79b2;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #fff;
-  animation: glitch-hover 0.3s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-hover {
-  0% { 
-    text-shadow: 2px 0 cyan, -2px 0 magenta;
-    transform: translate(0);
-  }
-  20% { 
-    text-shadow: -2px 0 cyan, 2px 0 magenta;
-    transform: translate(-2px, -2px);
-  }
-  40% { 
-    text-shadow: 2px 0 cyan, -2px 0 magenta;
-    transform: translate(2px, -2px);
-  }
-  60% { 
-    text-shadow: -2px 0 cyan, 2px 0 magenta;
-    transform: translate(-2px, 2px);
-  }
-  80% { 
-    text-shadow: 2px 0 cyan, -2px 0 magenta;
-    transform: translate(2px, 2px);
-  }
-  100% { 
-    text-shadow: -2px 0 cyan, 2px 0 magenta;
-    transform: translate(0);
-  }
-}
-      .button {
-  display: inline-block;
-  background: #6a00ff33;
-  color: #c77bff;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 2px solid #6a00ff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-.button:hover {
-  background: #6a00ff;
-  color: #fff;
-  box-shadow: 0 0 20px #6a00ff;
-  transform: translateY(-3px);
-}
-  body {
-    cursor: url('https://static.wikia.nocookie.net/murder-drones/images/3/30/AbsoluteSolverIcon.png/revision/latest?cb=20230901234250'), auto !important;
-  }
-  body, a, * {
+<head>
+  <title>JCJenson Terminal - Accessed by Uzi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <style>
+    body, a, * {
+      cursor: url('https://static.wikia.nocookie.net/murder-drones/images/3/30/AbsoluteSolverIcon.png/revision/latest?cb=20230901234250') 15 15, auto !important;
     }
-    cursor: url('https://static.wikia.nocookie.net/murder-drones/images/3/30/AbsoluteSolverIcon.png/revision/latest?cb=20230901234250') 15 15, auto !important;
-  }
-</style>
-    <title>JCJenson Terminal - Accessed by Uzi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-  </head>
 
-    <body>
+    body {
+      background: #2f2c43;
+      color: #c77bff;
+      font-family: 'Michroma', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .terminal {
+      border: 2px solid #6a00ff;
+      padding: 30px;
+      border-radius: 10px;
+      background: #1e1428;
+      box-shadow: 0 0 20px #6a00ff;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1.glitch {
+      font-size: 3.5rem;
+      margin: 0 0 20px;
+    }
+    .glitch {
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      display: inline-block;
+    }
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitch::before { left: 2px; text-shadow: -2px 0 magenta; animation: glitch-anim 2s infinite linear alternate-reverse; }
+    .glitch::after  { left: -2px; text-shadow: 2px 0 cyan;   animation: glitch-anim2 3s infinite linear alternate-reverse; }
+
+    @keyframes glitch-anim {
+      0%,100% { clip: rect(10px,9999px,20px,0); }
+      20% { clip: rect(30px,9999px,80px,0); }
+      40% { clip: rect(60px,9999px,40px,0); }
+      60% { clip: rect(10px,9999px,90px,0); }
+      80% { clip: rect(50px,9999px,60px,0); }
+    }
+    @keyframes glitch-anim2 {
+      0%,100% { clip: rect(5px,9999px,40px,0); }
+      20% { clip: rect(50px,9999px,10px,0); }
+      40% { clip: rect(10px,9999px,90px,0); }
+      60% { clip: rect(80px,9999px,30px,0); }
+      80% { clip: rect(40px,9999px,60px,0); }
+    }
+
+    /* ----- BUTTONS ----- */
+    .button {
+      display: inline-block;
+      background: #6a00ff33;
+      color: #c77bff;
+      padding: 12px 24px;
+      margin: 10px 0;
+      border: 2px solid #6a00ff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .button:hover {
+      background: #6a00ff;
+      color: #fff;
+      box-shadow: 0 0 20px #6a00ff;
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body>
   <div class="terminal">
-    <h1 class="glitch" data-text="JCJENSON INTERNAL TERMINAL">
-  JCJENSON INTERNAL TERMINAL
-</h1>
+    <h1 class="glitch" data-text="JCJENSON INTERNAL TERMINAL">JCJENSON INTERNAL TERMINAL</h1>
     <p>Accessed by: <strong>Uzi Doorman</strong></p>
-    <p class="log">Booting system... <br>Bypassing parental locks... <br>Loading absolute_solver.exe...</p>
-
+    <p class="log">Booting system...<br>Bypassing parental locks...<br>Loading absolute_solver.exe...</p>
     <h2>Navigation</h2>
 
-    <a href="characters.html" class="button" onclick="hackerJump(event, 'characters.html')">Character Files <span style="color:#ffcc00;">[ACCESS GRANTED]</span></a>
-    <br>
-    <a href="episodes.html" class="button">Episode Guide</a>
-    <br>
-    <a href="timeline.html" class="button">Timeline</a>
-    <br>
-    <a href="lore.html" class="button">Lore Files</a>
-    <br>
-    <a href="fanart.html" class="button">Fan Art Gallery</a>
-    <br>
+    <a href="characters.html" class="button" onclick="hackerJump(event, 'characters.html')">
+      Character Files <span style="color:#ffcc00;">[ACCESS GRANTED]</span>
+    </a><br>
+
+    <a href="episodes.html" class="button">Episode Guide</a><br>
+    <a href="timeline.html" class="button">Timeline</a><br>
+    <a href="lore.html" class="button">Lore Files</a><br>
+    <a href="fanart.html" class="button">Fan Art Gallery</a><br>
     <a href="memes.html" class="button">Meme Vault</a>
-    <p></p>
-    <p class="log">System stable. Try not to break anything.  — Uzi -</p>
+
+    <p><br><br><p class="log">System stable. Try not to break anything. — Uzi -</p>
   </div>
 
-  </body>
+  <!-- HACKER TRANSITION SCRIPT -->
+  <script>
+    function hackerJump(e, page) {
+      e.preventDefault();
+      document.body.style.transition = 'all 0.15s';
+      document.body.style.filter = 'brightness(4) hue-rotate(120deg)';
+
+      const overlay = document.createElement('div');
+      overlay.innerHTML = 'ACCESSING...<br>ABSOLUTE_SOLVER OVERRIDE';
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.background = 'rgba(0,0,0,0.95)';
+      overlay.style.color = '#ffcc00';
+      overlay.style.fontSize = '3rem';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.textAlign = 'center';
+      overlay.style.textShadow = '0 0 30px #ff00ff';
+      overlay.style.zIndex = '9999';
+      overlay.style.fontFamily = "'Michroma', monospace";
+      document.body.appendChild(overlay);
+
+      setTimeout(() => {
+        document.body.style.filter = '';
+        overlay.remove();
+        window.location.href = page;
+      }, 900);
+    }
+  </script>
+</body>
 </html>
+
