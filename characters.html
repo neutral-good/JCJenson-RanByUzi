@@ -49,8 +49,40 @@
            margin:0;
            color:#ff66ff;
           }
-    .rating {font-size:0.8rem;
-             color:#39ff14;
+
+  .rating {
+    font-size: 0.8rem;
+  .green  { color: #39ff14; }
+  .yellow { color: #cfff04; }
+  .red    { color: #ff3131; }
+  .purple { color: #9d00ff; }
+  .blue   { color: #00c4ff; }
+
+<div class="rating">7/10</div>
+<div class="rating">9/10</div>
+<div class="rating">3/10</div>
+<div class="rating">12/10</div>
+<div class="rating">-1/10</div>
+
+<script>
+function getRatingClass(num) {
+  if (num > 10) return "blue";
+  if (num >= 8) return "green";
+  if (num >= 5) return "yellow";
+  if (num >= 0) return "red";
+  return "purple";
+}
+
+// Apply to all .rating elements
+document.querySelectorAll('.rating').forEach(el => {
+  // Extract the number before "/"
+  let num = parseFloat(el.textContent.split('/')[0]);
+
+  // Determine color class
+  el.classList.add(getRatingClass(num));
+});
+</script>
+
             }
     .status {font-size:0.9rem;
              color:#ffcc00;
