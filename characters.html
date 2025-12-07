@@ -194,9 +194,9 @@
 <script>
 function getRatingClass(num) {
   if (num > 10) return "blue";
-  elif (num >= 8) return "green";
-  elif (num >= 5) return "yellow";
-  elif (num >= 0) return "red";
+  else if (num >= 8) return "green";
+  else if (num >= 5) return "yellow";
+  else if (num >= 0) return "red";
   else return "purple";
 }
 
@@ -210,4 +210,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
