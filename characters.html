@@ -3,117 +3,120 @@
 <head>
   <title>CHARACTER FILES // JCJENSON TERMINAL</title>
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
   <style>
-    body, a, * {cursor: images/AbsoluteSolver.png 15 15, auto !important;}
+    body, a, * {
+      cursor: images/AbsoluteSolver.png 15 15, auto !important;
+    }
     
-    body {background:#2f2c43;
-          color:#c77bff;
-          font-family:'Michroma',sans-serif;
-          margin:0;
-          padding:20px;
-         }
-    .terminal {border:2px solid #6a00ff;
-               padding:30px;
-               border-radius:10px;
-               background:#1e1428;
-               box-shadow:0 0 20px #6a00ff;
-               max-width:1000px;
-               margin:0 auto;
-              }
-    h1.glitch {font-size:3.5rem;
-               margin:0 0 30px;
-              }
-    .grid {display:grid;
-           grid-template-columns:
-             repeat(auto-fit,minmax(280px,1fr));
-           gap:25px;
-          }
-    .card {background:#2a1f38;
-           border:1px solid #6a00ff;
-           border-radius:8px;
-           overflow:hidden;
-           box-shadow:0 0 15px #6a00ff55;
-           transition:0.4s;
-          }
-    .card:hover {transform:translateY(-8px);
-                 box-shadow:0 0 30px #6a00ff;
-                }
-    .card img {width:100%;
-               height:320px;
-               object-fit:cover;
-              }
-    .info {padding:15px;
-           text-align:center;
-          }
-    .name {font-size:1.5rem;
-           margin:0;
-           color:#ff66ff;
-          }
+    body {
+      background:#2f2c43;
+      color:#c77bff;
+      font-family:'Michroma',sans-serif;
+      margin:0;
+      padding:20px;
+    }
 
-  .rating {
-    font-size: 0.8rem;
-  .green  { color: #39ff14; }
-  .yellow { color: #cfff04; }
-  .red    { color: #ff3131; }
-  .purple { color: #9d00ff; }
-  .blue   { color: #00c4ff; }
+    .terminal {
+      border:2px solid #6a00ff;
+      padding:30px;
+      border-radius:10px;
+      background:#1e1428;
+      box-shadow:0 0 20px #6a00ff;
+      max-width:1000px;
+      margin:0 auto;
+    }
 
-<div class="rating">7/10</div>
-<div class="rating">9/10</div>
-<div class="rating">3/10</div>
-<div class="rating">12/10</div>
-<div class="rating">-1/10</div>
+    h1.glitch {
+      font-size:3.5rem;
+      margin:0 0 30px;
+    }
 
-<script>
-function getRatingClass(num) {
-  if (num > 10) return "blue";
-  if (num >= 8) return "green";
-  if (num >= 5) return "yellow";
-  if (num >= 0) return "red";
-  else return "purple";
-}
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
 
-// Apply to all .rating elements
-document.querySelectorAll('.rating').forEach(el => {
-  // Extract the number before "/"
-  let num = parseFloat(el.textContent.split('/')[0]);
+    .card {
+      background:#2a1f38;
+      border:1px solid #6a00ff;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 0 15px #6a00ff55;
+      transition:0.4s;
+    }
 
-  // Determine color class
-  el.classList.add(getRatingClass(num));
-});
-</script>
+    .card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 0 30px #6a00ff;
+    }
 
-            }
-    .status {font-size:0.9rem;
-             color:#ffcc00;
-            }
-    .clearance {font-size:0.8rem;
-                color:#ff0066;
-                margin-top:8px;
-               }
-    .button {display:inline-block;
-             background:#6a00ff33;
-             color:#c77bff;
-             padding:10px 18px;
-             margin:20px 0;
-             border:2px solid #6a00ff;
-             border-radius:6px;
-             text-decoration:none;
-             transition:0.3s;
-            }
-    .button:hover {background:#6a00ff;
-                   color:#fff;
-                   box-shadow:0 0 20px #6a00ff;
-                  }
-    .back {text-align:center;
-           margin-top:40px;
-          }
+    .card img {
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .info {
+      padding:15px;
+      text-align:center;
+    }
+
+    .name {
+      font-size:1.5rem;
+      margin:0;
+      color:#ff66ff;
+    }
+
+    /* FIXED RATING + COLORS */
+    .rating { font-size: 0.8rem; }
+    .green  { color: #39ff14; }
+    .yellow { color: #cfff04; }
+    .red    { color: #ff3131; }
+    .purple { color: #9d00ff; }
+    .blue   { color: #00c4ff; }
+
+    .status {
+      font-size:0.9rem;
+      color:#ffcc00;
+    }
+
+    .clearance {
+      font-size:0.8rem;
+      color:#ff0066;
+      margin-top:8px;
+    }
+
+    .button {
+      display:inline-block;
+      background:#6a00ff33;
+      color:#c77bff;
+      padding:10px 18px;
+      margin:20px 0;
+      border:2px solid #6a00ff;
+      border-radius:6px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .button:hover {
+      background:#6a00ff;
+      color:#fff;
+      box-shadow:0 0 20px #6a00ff;
+    }
+
+    .back {
+      text-align:center;
+      margin-top:40px;
+    }
   </style>
 </head>
+
 <body>
 <div class="terminal">
   <h1 class="glitch" data-text="CHARACTERS">CHARACTERS</h1>
-  <p><strong>ACCESS LEVEL:</strong> Uzi Doorman (admin override active) </p>
+  <p><strong>ACCESS LEVEL:</strong> Uzi Doorman (admin override active)</p>
 
   <div class="grid">
 
@@ -171,7 +174,7 @@ document.querySelectorAll('.rating').forEach(el => {
     </div>
     
     <div class="card">
-      <img src="https://static.wikia.nocookie.net/murder-drones/images/5/55/Khan_Render.png" alt="Khan">
+      <img src="images/khan.png">
       <div class="info">
         <h3 class="name">KHAN DOORMAN</h3>
         <p class="status">Worker Drone / Door Enthusiast</p>
@@ -186,5 +189,24 @@ document.querySelectorAll('.rating').forEach(el => {
     <a href="index.html" class="button">← BACK TO TERMINAL</a>
   </div>
 </div>
+
+<script>
+function getRatingClass(num) {
+  if (num > 10) return "blue";
+  if (num >= 8) return "green";
+  if (num >= 5) return "yellow";
+  if (num >= 0) return "red";
+  return "purple";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.rating').forEach(el => {
+    let num = parseFloat(el.textContent.split('/')[0]);
+    el.classList.add(getRatingClass(num));
+  });
+});
+</script>
+
 </body>
 </html>
+
