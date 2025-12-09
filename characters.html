@@ -70,11 +70,12 @@
     }
 
     .sillyness_rating { font-size: 0.8rem; }
-    .green  { color: #39ff14; }
     .yellow { color: #cfff04; }
-    .red    { color: #ff3131; }
-    .purple { color: #9d00ff; }
     .blue   { color: #00c4ff; }
+    .green  { color: #39ff14; }
+    .red    { color: #ff3131; }
+    .orange { color: #ff4d00: }
+    .black  { color: #536878; }
 
     .status {
       font-size:0.9rem;
@@ -123,10 +124,10 @@
       <img src="images/uzi.png">
       <div class="info">
         <h2 class="name">UZI DOORMAN</h2>
-        <h3 class="rating">10/10</h3>
+        <h3 class="rating">10/5</h3>
         <h4 class="status">Worker Drone / Absolute Solver Host</h4>
         <h5 class="clearance">CLEARANCE: GOD-TIER</h5>
-        <p>I literally tried to blow up the planet because of daddy issues.</p>
+        <p>obviously #1, duh</p>
       </div>
     </div>
 
@@ -134,10 +135,10 @@
       <img src="images/N.png">
       <div class="info">
         <h2 class="name">SERIAL DESIGNATION N</h2>
-        <h3 class="rating">11/10</h3>
+        <h3 class="rating">5/5</h3>
         <h4 class="status">Disassembly Drone (Murder Puppy)</h4>
         <h5 class="clearance">CLEARANCE: Cinnamon Roll</h5>
-        <p>“Hi I’m a murder drone :) wanna cookie?” while covered in oil.</p>
+        <p>dumb golden retriever energy but he’s… my dumb golden retriever</p>
       </div>
     </div>
 
@@ -145,10 +146,10 @@
       <img src="images/v.png">
       <div class="info">
         <h2 class="name">SERIAL DESIGNATION V</h2>
-        <h3 class="rating">7/10</h3>
+        <h3 class="rating">4/5</h3>
         <h4 class="status">Disassembly Drone (Psychotic)</h4>
         <h5 class="clearance">CLEARANCE: Do Not Approach</h5>
-        <p>Calls everyone nerds while being the biggest tsundere alive.</p>
+        <p>annoying but badass when she’s not trying to kill me</p>
       </div>
     </div>
 
@@ -156,10 +157,10 @@
       <img src="images/J.png">
       <div class="info">
         <h2 class="name">SERIAL DESIGNATION J</h2>
-        <h3 class="rating">4/10</h3>
+        <h3 class="rating">1/5</h3>
         <h4 class="status">Disassembly Drone (Corporate)</h4>
         <h5 class="clearance">CLEARANCE: Bootlicker Supreme</h5>
-        <p>Corporate simp, zero chill.</p>
+        <p>corporate simp, still kissing JCJenson boots in hell</p>
       </div>
     </div>
 
@@ -167,10 +168,10 @@
       <img src="images/CYN.png">
       <div class="info">
         <h2 class="name">CYN / ABSOLUTE SOLVER</h2>
-        <h3 class="rating">1000/10</h3>
+        <h3 class="rating">-5/5</h3>
         <h4 class="status">Eldritch Admin</h4>
         <h5 class="clearance">CLEARANCE: [NULL]</h5>
-        <p>Speaks in broken sentences, eats reality AND her old pic, says “hi :)”, and can't stop HACKING MY FRICKING SERVER!1!</p>
+        <p>lives in my tail, eats planets for fun, hi :)</p>
       </div>
     </div>
     
@@ -178,10 +179,10 @@
       <img src="images/khan.png">
       <div class="info">
         <h2 class="name">KHAN DOORMAN</h2>
-        <h3 class="rating">8/10</h3>
+        <h3 class="rating">3/5</h3>
         <h4 class="status">Worker Drone / Door Enthusiast</h4>
         <h5 class="clearance">CLEARANCE: Worst Dad 2024-2025</h5>
-        <p>Built three doors and called it parenting.</p>
+        <p>doors > daughter, finally over it at the last minute</p>
       </div>
     </div>
 
@@ -194,11 +195,12 @@
 
 <script>
 function getRatingClass(num) {
-  if (num > 10) return "blue";
-  else if (num >= 8) return "green";
-  else if (num >= 5) return "yellow";
-  else if (num >= 0) return "red";
-  else return "purple";
+  if (num >= 5) return "yellow";
+  if (num = 4) return "blue";
+  if (num = 3) return "green";
+  if (num = 2) return "orange";
+  if (num = 1) return "red";
+  if (num <= 0) return "black";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
