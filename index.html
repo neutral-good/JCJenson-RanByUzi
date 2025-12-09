@@ -5,11 +5,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
   <style>
     body, a, * {
-      cursor: url('https://static.wikia.nocookie.net/murder-drones/images/3/30/AbsoluteSolverIcon.png/revision/latest?cb=20230901234250') 15 15, auto !important;
+      cursor: ("image/AbosluteSolver.webp") 15 15, auto !important;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .nav-left {
+      flex: 1;
+    }
+
+    .nav-right img {
+      border-radius: 12px;
+      box-shadow: 0 0 15px #6a00ff;
     }
 
     body {
-      background: #2f2c43;
+      background: #2f2c74;
       color: #c77bff;
       font-family: 'Michroma', sans-serif;
       margin: 0;
@@ -87,19 +102,28 @@
     <h1 class="glitch" data-text="JCJENSON INTERNAL TERMINAL">JCJENSON INTERNAL TERMINAL</h1>
     <p>Accessed by: <strong>Uzi Doorman</strong></p>
     <p class="log">Booting system...<br>Bypassing parental locks...<br>Loading absolute_solver.exe...</p>
-    <h2>Navigation</h2>
+    <div class="nav-container">
 
-    <a href="characters.html" class="button" onclick="hackerJump(event, 'characters.html')">
-      Character Files <span style="color:#ffcc00;">[ACCESS GRANTED]</span>
-    </a><br>
+      <div class="nav-left">
+        <h2>Navigation</h2>
+  
+        <a href="characters.html" class="button" onclick="hackerJump(event, 'characters.html')">
+          Character Files <span style="color:#ffcc00;">[ACCESS GRANTED]</span>
+        </a><br>
+        <a href="episodes.html" class="button">Episode Guide</a><br>
+        <a href="timeline.html" class="button">Timeline</a><br>
+        <a href="lore.html" class="button">Lore Files</a><br>
+        <a href="fanart.html" class="button">Fan Art Gallery</a><br>
+        <a href="memes.html" class="button">Meme Vault</a>
+      </div>
 
-    <a href="episodes.html" class="button">Episode Guide</a><br>
-    <a href="timeline.html" class="button">Timeline</a><br>
-    <a href="lore.html" class="button">Lore Files</a><br>
-    <a href="fanart.html" class="button">Fan Art Gallery</a><br>
-    <a href="memes.html" class="button">Meme Vault</a>
+      <div class="nav-right">
+        <img src="images/UziThumbn.png">
+      </div>
 
-    <p><br><br><p class="log">System stable. Try not to break anything. — Uzi -</p>
+  </div>
+
+    <p><br><br><p class="log">System stable. Try not to break anything.  — Uzi -</p>
   </div>
 
   <script>
@@ -109,7 +133,7 @@
       document.body.style.filter = 'brightness(4) hue-rotate(120deg)';
 
       const overlay = document.createElement('div');
-      overlay.innerHTML = 'ACCESSING...<br>ABSOLUTE_SOLVER OVERRIDE';
+      overlay.innerHTML = 'ACCESSING...<br>ABSOLUTE_SOLVER.EXE OVERRIDE';
       overlay.style.position = 'fixed';
       overlay.style.inset = '0';
       overlay.style.background = 'rgba(0,0,0,0.95)';
