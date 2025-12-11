@@ -5,10 +5,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
   <style>
-    body, a, * {
-      cursor: ("image/AbsoluteSolver.webp") 15 15, auto !important;
-    }
-    
     body {
       background:#2f2c43;
       color:#c77bff;
@@ -203,11 +199,11 @@
 <script>
 function getRatingClass(num) {
   if (num >= 5) return "yellow";
-  if (num = 4) return "blue";
-  if (num = 3) return "green";
-  if (num = 2) return "orange";
-  if (num = 1) return "red";
-  if (num <= 0) return "black";
+  else if (num = 4) return "blue";
+  else if (num = 3) return "green";
+  else if (num = 2) return "orange";
+  else if (num = 1) return "red";
+  else if (num <= 0) return "black";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
